@@ -1,9 +1,7 @@
-import { createLightsArray } from "./createLightsArray";
-
 export function turnOnLights(
-  rectangleCornersCoordinates: number[]
+  rectangleCornersCoordinates: number[],
+  lightsArray: string[][]
 ): string[][] {
-  var blankLightsArray = createLightsArray();
   let topLeftCorner = [
     rectangleCornersCoordinates[0],
     rectangleCornersCoordinates[1],
@@ -14,8 +12,8 @@ export function turnOnLights(
   ];
   for (var i = topLeftCorner[0]; i <= bottomRightCorner[0]; i++) {
     for (var j = topLeftCorner[1]; j <= bottomRightCorner[1]; j++) {
-      blankLightsArray[i][j] = "1";
+      lightsArray[i][j] = "1";
     }
   }
-  return blankLightsArray;
+  return lightsArray;
 }
