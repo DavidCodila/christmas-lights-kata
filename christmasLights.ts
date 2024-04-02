@@ -36,5 +36,13 @@ export function numberOfLightsOn(lightsArray: string[][]): number {
 }
 
 export function lightsBrightness(lightsArray: string[][]): number {
-  return 0;
+  var brightness = 0;
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      if (lightsArray[i][j] != "0") {
+        brightness += Number(lightsArray[i][j]);
+      }
+    }
+  }
+  return brightness;
 }

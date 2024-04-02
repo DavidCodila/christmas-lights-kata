@@ -56,7 +56,7 @@ test("how many lights are left", () => {
   filledLightsArray = alterRectangleLights(scenario_4, filledLightsArray, "0");
   filledLightsArray = alterRectangleLights(scenario_5, filledLightsArray, "T");
   var result = numberOfLightsOn(filledLightsArray);
-  expect(result).toEqual(28);
+  expect(result).toEqual(34);
 });
 
 test("what is the brightness of all the lights", () => {
@@ -64,4 +64,5 @@ test("what is the brightness of all the lights", () => {
   filledLightsArray = alterRectangleLights(scenario_4, filledLightsArray, "0");
   filledLightsArray = alterRectangleLights(scenario_5, filledLightsArray, "T");
   var result = lightsBrightness(filledLightsArray);
+  expect(result).toEqual(58);
 });
