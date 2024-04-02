@@ -22,3 +22,7 @@ export function alterRectangleLights(
   }
   return lightsArray;
 }
+
+export function numberOfLightsOn(lightsArray: string[][]): number {
+  return 0;
+}
