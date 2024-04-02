@@ -24,5 +24,13 @@ export function alterRectangleLights(
 }
 
 export function numberOfLightsOn(lightsArray: string[][]): number {
-  return 0;
+  var numberOfLightsOn = 0;
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      if (lightsArray[i][j] == "1") {
+        numberOfLightsOn++;
+      }
+    }
+  }
+  return numberOfLightsOn;
 }
