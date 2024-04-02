@@ -17,3 +17,10 @@ export function turnOnLights(
   }
   return lightsArray;
 }
+
+export function turnOffLights(
+  rectangleCornersCoordinates: number[],
+  lightsArray: string[][]
+): string[][] {
+  return [];
+}
