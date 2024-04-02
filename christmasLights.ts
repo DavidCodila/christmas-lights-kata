@@ -13,7 +13,11 @@ export function alterRectangleLights(
   ];
   for (var i = topLeftCorner[0]; i <= bottomRightCorner[0]; i++) {
     for (var j = topLeftCorner[1]; j <= bottomRightCorner[1]; j++) {
-      lightsArray[i][j] = onOrOff;
+      if (onOrOff == "T") {
+        if (lightsArray[i][j] == "0") {
+          lightsArray[i][j] = "1";
+        } else lightsArray[i][j] = "0";
+      } else lightsArray[i][j] = onOrOff;
     }
   }
   return lightsArray;

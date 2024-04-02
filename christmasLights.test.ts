@@ -44,5 +44,5 @@ test("should toggle lights 7,1 through 8,9", () => {
   var filledLightsArray = fillArrayWith1to3Scenarios();
   filledLightsArray = alterRectangleLights(scenario_4, filledLightsArray, "0");
   var result = alterRectangleLights(scenario_5, filledLightsArray, "T");
-  expect(result).toEqual(christmasLightsExpected.scenario4);
+  expect(result).toEqual(christmasLightsExpected.scenario5);
 });
