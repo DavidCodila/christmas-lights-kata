@@ -1,4 +1,4 @@
-export function alterRectangleLights(
+function alterRectangleLights(
   rectangleCornersCoordinates: number[],
   lightsArray: string[][],
   onOrOff: string
@@ -21,6 +21,27 @@ export function alterRectangleLights(
     }
   }
   return lightsArray;
+}
+
+export function turnOn(
+  rectangleCornersCoordinates: number[],
+  lightsArray: string[][]
+) {
+  return alterRectangleLights(rectangleCornersCoordinates, lightsArray, "1");
+}
+
+export function turnOff(
+  rectangleCornersCoordinates: number[],
+  lightsArray: string[][]
+) {
+  return alterRectangleLights(rectangleCornersCoordinates, lightsArray, "0");
+}
+
+export function toggle(
+  rectangleCornersCoordinates: number[],
+  lightsArray: string[][]
+) {
+  return alterRectangleLights(rectangleCornersCoordinates, lightsArray, "T");
 }
 
 export function countLights(
