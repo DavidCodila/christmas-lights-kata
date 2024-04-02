@@ -1,7 +1,8 @@
-export function turnOnLights(
+export function alterRectangleLights(
   rectangleCornersCoordinates: number[],
-  lightsArray: string[][]
-): string[][] {
+  lightsArray: string[][],
+  onOrOff: string
+) {
   let topLeftCorner = [
     rectangleCornersCoordinates[0],
     rectangleCornersCoordinates[1],
@@ -12,15 +13,8 @@ export function turnOnLights(
   ];
   for (var i = topLeftCorner[0]; i <= bottomRightCorner[0]; i++) {
     for (var j = topLeftCorner[1]; j <= bottomRightCorner[1]; j++) {
-      lightsArray[i][j] = "1";
+      lightsArray[i][j] = onOrOff;
     }
   }
   return lightsArray;
-}
-
-export function turnOffLights(
-  rectangleCornersCoordinates: number[],
-  lightsArray: string[][]
-): string[][] {
-  return [];
 }
