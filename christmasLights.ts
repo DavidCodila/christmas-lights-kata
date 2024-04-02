@@ -23,26 +23,22 @@ export function alterRectangleLights(
   return lightsArray;
 }
 
-export function numberOfLightsOn(lightsArray: string[][]): number {
+export function countLights(
+  lightsArray: string[][],
+  brightnessWanted: boolean
+): number {
+  var brightness = 0;
   var numberOfLightsOn = 0;
   for (var i = 0; i < 10; i++) {
     for (var j = 0; j < 10; j++) {
       if (lightsArray[i][j] != "0") {
-        numberOfLightsOn++;
+        if (brightnessWanted) {
+          brightness += Number(lightsArray[i][j]);
+        } else numberOfLightsOn++;
       }
     }
   }
-  return numberOfLightsOn;
-}
-
-export function lightsBrightness(lightsArray: string[][]): number {
-  var brightness = 0;
-  for (var i = 0; i < 10; i++) {
-    for (var j = 0; j < 10; j++) {
-      if (lightsArray[i][j] != "0") {
-        brightness += Number(lightsArray[i][j]);
-      }
-    }
-  }
-  return brightness;
+  if (brightness != 0) {
+    return brightness;
+  } else return numberOfLightsOn;
 }

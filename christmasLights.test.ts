@@ -1,7 +1,7 @@
 import { test, expect } from "bun:test";
 import {
   alterRectangleLights,
-  numberOfLightsOn,
+  countLights,
   lightsBrightness,
 } from "./christmasLights";
 import * as christmasLightsExpected from "./christmasLightsScenariosExpected";
@@ -55,7 +55,7 @@ test("how many lights are left", () => {
   var filledLightsArray = fillArrayWith1to3Scenarios();
   filledLightsArray = alterRectangleLights(scenario_4, filledLightsArray, "0");
   filledLightsArray = alterRectangleLights(scenario_5, filledLightsArray, "T");
-  var result = numberOfLightsOn(filledLightsArray);
+  var result = countLights(filledLightsArray, false);
   expect(result).toEqual(34);
 });
 
@@ -63,6 +63,6 @@ test("what is the brightness of all the lights", () => {
   var filledLightsArray = fillArrayWith1to3Scenarios();
   filledLightsArray = alterRectangleLights(scenario_4, filledLightsArray, "0");
   filledLightsArray = alterRectangleLights(scenario_5, filledLightsArray, "T");
-  var result = lightsBrightness(filledLightsArray);
+  var result = countLights(filledLightsArray, true);
   expect(result).toEqual(58);
 });
